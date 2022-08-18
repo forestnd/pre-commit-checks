@@ -59,4 +59,14 @@
     language: script
     files: \.tf$
     exclude: \.+.terraform\/.*$
-    require_serial: true    
+    require_serial: true
+-   id: checkov
+    name: Checkov
+    description: This hook runs checkov.
+    entry: checkov -d .
+    language: python
+    pass_filenames: false
+    always_run: false
+    files: \.tf$
+    exclude: \.+.terraform\/.*$
+    require_serial: true
