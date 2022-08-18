@@ -32,8 +32,7 @@ setup(
             'detect-private-key= hooks.detect_private_key:main',
             'check-added-large-files= hooks.check_added_large_files:main',
             'double-quote-string-fixer = hooks.string_fixer:main',
-            'check-json= hooks.check_json:main',
-            'black=black:patched_main',
+            'check-json= hooks.check_json:main'
         ],
     },
 )
