@@ -1,0 +1,40 @@
+---
+  # Codeing-checks
+-   id: trailing-whitespace
+    name: trim trailing whitespace
+    description: trims trailing whitespace.
+    entry: trailing-whitespace-fixer
+    language: python
+    types: [text]
+    stages: [commit, push, manual]
+-   id: detect-aws-credentials
+    name: detect aws credentials
+    description: detects *your* aws credentials from the aws cli credentials file.
+    entry: detect-aws-credentials
+    language: python
+-   id: detect-private-key
+    name: detect private key
+    description: detects the presence of private keys.
+    entry: detect-private-key
+    language: python
+-   id: check-added-large-files
+    name: check for added large files
+    description: prevents giant files from being committed.
+    entry: check-added-large-files
+    language: python
+    stages: [commit, push, manual]
+-   id: check-json
+    name: check json
+    description: checks json files for parseable syntax.
+    entry: check-json
+    language: python
+    types: [json]
+-   id: black
+    name: black
+    description: "Black: The uncompromising Python code formatter"
+    entry: black
+    language: python
+    minimum_pre_commit_version: 2.9.2
+    require_serial: true
+    types_or: [python, pyi]
+# IaC checks
