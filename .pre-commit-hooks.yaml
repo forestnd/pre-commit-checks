@@ -37,4 +37,10 @@
     minimum_pre_commit_version: 2.9.2
     require_serial: true
     types_or: [python, pyi]
+-   id: double-quote-string-fixer
+    name: fix double quoted strings
+    description: replaces double quoted strings with single quoted strings.
+    entry: double-quote-string-fixer
+    language: python
+    types: [python]
 # IaC checks
