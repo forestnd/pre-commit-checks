@@ -44,3 +44,19 @@
     language: python
     types: [python]
 # IaC checks
+-   id: terraform-fmt
+    name: Terraform fmt
+    description: Rewrites all Terraform configuration files to a canonical format
+    entry: hooks/terraform-fmt.sh
+    language: script
+    files: \.tf$
+    exclude: \.+.terraform\/.*$
+    require_serial: true
+-   id: terraform-validate
+    name: Terraform validate
+    description: Validates all Terraform configuration files
+    entry: hooks/terraform-validate.sh
+    language: script
+    files: \.tf$
+    exclude: \.+.terraform\/.*$
+    require_serial: true    
